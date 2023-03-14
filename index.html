@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password hide & show toggle</title>
+    <link rel="stylesheet" href="./style2.css" />
+  </head>
+  <body>
+    <form>
+      <input id="password" type="password" />
+      <input type="button" onclick="show()" value="show" />
+      <input type="button" onclick="hide()" value="hide" />
+      <input type="button" onclick="toggle()" value="toggle" />
+    </form>
+    <script>
+      let passwordElement = document.getElementById("password");
+      function show() {
+        passwordElement.type = "text";
+      }
+      function hide() {
+        passwordElement.type = "password";
+      }
+      function toggle() {
+        if (passwordElement.type === "text") {
+          passwordElement.type = "password";
+        } else {
+          passwordElement.type = "text";
+        }
+      }
+    </script>
+  </body>
+</html>
